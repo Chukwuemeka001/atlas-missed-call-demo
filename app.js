@@ -14,6 +14,7 @@
   ---------------------------------------------------------- */
   var CONFIG = {
     contactEmail: 'atlas-autonomous-agent@proton.me',
+    contactPhone: '4166020594',
     contactName: 'Emeka',
     company: 'Atlas Automation',
   };
@@ -64,13 +65,7 @@
       '?subject=' + encodeURIComponent(subj) +
       '&body=' + encodeURIComponent(body);
 
-    var callSubj = 'Call me back about the missed-call demo';
-    var callBody =
-      'Hi ' + CONFIG.contactName + ',\n\nPlease give me a call about the missed-call text-back demo.\n' +
-      'Best number: \nBest time: \n\nThanks,\n';
-    var callto = 'mailto:' + CONFIG.contactEmail +
-      '?subject=' + encodeURIComponent(callSubj) +
-      '&body=' + encodeURIComponent(callBody);
+    var callto = 'tel:' + CONFIG.contactPhone;
 
     var emailBtn = document.getElementById('book-email');
     var callBtn = document.getElementById('book-call');
