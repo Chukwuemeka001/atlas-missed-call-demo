@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Never lose another job to a missed call · Atlas Automation</title>
+  <meta name="description" content="When a customer calls and you can't pick up, they get a friendly text back in seconds — and you get the lead. A live, interactive demo for Peterborough trades." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📲</text></svg>" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">▲</span>
+        <span class="brand-name">Atlas Automation</span>
+      </a>
+      <a class="btn btn-sm btn-primary" href="#book" data-cta="nav">Book a 10-min demo</a>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">For Peterborough &amp; Kawartha trades</p>
+      <h1 class="hero-title">
+        When <span class="hl" id="biz-hero">your business</span> can't pick up,
+        the customer still gets booked.
+      </h1>
+      <p class="hero-sub">
+        You're on a job, under a sink, or it's 7&nbsp;p.m. The phone rings and you miss it.
+        Right now that caller dials the next name on Google. <strong>Atlas texts them back in
+        seconds in your name</strong>, captures what they need, and drops a clean lead on your
+        dashboard — so the job stays yours.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="#demo">See the live demo ↓</a>
+        <a class="btn btn-ghost btn-lg" href="#book" data-cta="hero">Book a 10-min call</a>
+      </div>
+      <ul class="trust-row">
+        <li>✓ Works with your existing number</li>
+        <li>✓ No app for your customer</li>
+        <li>✓ You approve every flow</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== PROBLEM ===================== -->
+  <section class="band problem">
+    <div class="wrap">
+      <h2 class="section-title">A missed call is a missed paycheque</h2>
+      <p class="section-lead" id="problem-lead">
+        Most owner-operators miss 1 in 4 calls during busy season — on a roof, in a crawlspace,
+        or after hours. Each one is a $300–$2,000 job that goes to whoever answers first.
+      </p>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-num">&lt; 30s</div>
+          <div class="stat-label">to text the customer back, automatically</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">85%</div>
+          <div class="stat-label">of people won't leave a voicemail — they just call the next shop</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">1 view</div>
+          <div class="stat-label">every new lead in one simple dashboard, not scattered notes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INTERACTIVE DEMO ===================== -->
+  <section class="band demo" id="demo">
+    <div class="wrap">
+      <h2 class="section-title">Try it yourself — no sign-up</h2>
+      <p class="section-lead">
+        Tap <strong>Simulate missed call</strong>, then reply like a customer would.
+        Watch the lead appear and fill in live on the dashboard on the right — exactly what
+        <span class="hl-soft" id="biz-demo">your business</span> would see each morning.
+      </p>
+
+      <div class="demo-grid">
+
+        <!-- Phone simulator -->
+        <div class="phone-col">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-bar">
+                <div class="phone-avatar" id="avatar">AT</div>
+                <div class="phone-meta">
+                  <div class="phone-who" id="phone-biz">Your Business</div>
+                  <div class="phone-sub">Text message · SMS</div>
+                </div>
+              </div>
+              <div class="thread" id="thread" aria-live="polite">
+                <div class="sys">Tap “Simulate missed call” to begin.</div>
+              </div>
+              <form class="composer" id="composer">
+                <input id="input" placeholder="Reply as the customer…" autocomplete="off" disabled />
+                <button type="submit" id="send" disabled aria-label="Send">➤</button>
+              </form>
+            </div>
+          </div>
+          <div class="demo-actions">
+            <button class="btn btn-primary" id="start">📞 Simulate missed call</button>
+            <button class="btn btn-ghost" id="reset">Reset</button>
+          </div>
+          <div class="quick-replies" id="quick-replies" hidden>
+            <span class="qr-label">Quick replies:</span>
+            <div id="quick-reply-buttons"></div>
+          </div>
+        </div>
+
+        <!-- Lead dashboard mock -->
+        <div class="dash-col">
+          <div class="dash">
+            <div class="dash-head">
+              <div>
+                <div class="dash-title">Lead dashboard</div>
+                <div class="dash-sub" id="dash-biz-sub">your morning view</div>
+              </div>
+              <div class="dash-live"><span class="dot"></span> live</div>
+            </div>
+
+            <div class="dash-stats">
+              <div class="dstat"><div class="dstat-num" id="stat-total">0</div><div class="dstat-label">Total leads</div></div>
+              <div class="dstat"><div class="dstat-num" id="stat-confirmed">0</div><div class="dstat-label">Confirmed</div></div>
+              <div class="dstat"><div class="dstat-num" id="stat-active">0</div><div class="dstat-label">In progress</div></div>
+              <div class="dstat"><div class="dstat-num" id="stat-recovered">$0</div><div class="dstat-label">Est. recovered</div></div>
+            </div>
+
+            <table class="dash-table">
+              <thead>
+                <tr><th>Name</th><th>Issue</th><th>Preferred time</th><th>Status</th></tr>
+              </thead>
+              <tbody id="dash-rows">
+                <tr class="dash-empty"><td colspan="4">No leads yet — run the simulator to see one land here.</td></tr>
+              </tbody>
+            </table>
+            <p class="dash-note">Demo data only. In a live pilot these are real customers, and you can forward each one to your phone, email, or a shared inbox.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BENEFITS ===================== -->
+  <section class="band benefits">
+    <div class="wrap">
+      <h2 class="section-title">What changes for you</h2>
+      <div class="benefit-grid">
+        <div class="benefit">
+          <div class="benefit-icon">💸</div>
+          <h3>Recover missed jobs</h3>
+          <p>Every unanswered call gets a friendly text back instantly, so the lead stays with you instead of the next shop on the list.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">⚡</div>
+          <h3>Answer first, win first</h3>
+          <p>Customers hire whoever responds fastest. An automatic reply in seconds beats a voicemail you return hours later.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">👀</div>
+          <h3>See every lead in one place</h3>
+          <p>Name, the job, and their preferred time — captured and confirmed. No more scribbled notes or "who was that number?"</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">🧹</div>
+          <h3>Less admin, not more</h3>
+          <p>The back-and-forth happens by text on autopilot. You step in when there's a confirmed job worth your time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LIVE PILOT (transparency) ===================== -->
+  <section class="band pilot" id="pilot">
+    <div class="wrap pilot-inner">
+      <div>
+        <h2 class="section-title left">What a live pilot actually looks like</h2>
+        <p class="section-lead left">
+          No magic and no black box. Here's exactly how this demo becomes real texts to your
+          real customers — and what stays in your control.
+        </p>
+      </div>
+      <ol class="pilot-steps">
+        <li>
+          <h3>1 · We connect a texting line</h3>
+          <p>We set up a business SMS number through a regulated provider (Twilio). It can text from your existing number's identity, or use a fresh local line — your call.</p>
+        </li>
+        <li>
+          <h3>2 · Missed calls trigger the text-back</h3>
+          <p>When a call to your line goes unanswered, the same conversation you just tested fires automatically. Nothing changes about how you answer calls you <em>can</em> take.</p>
+        </li>
+        <li>
+          <h3>3 · You approve the wording</h3>
+          <p>Before anything goes live, you sign off on the greeting, the questions, and where confirmed leads get sent (your phone, email, or a shared inbox).</p>
+        </li>
+        <li>
+          <h3>4 · Leads land where you work</h3>
+          <p>Each confirmed lead shows on the dashboard and can be forwarded to you instantly. You stay in the loop; sensitive or unusual requests route straight to you.</p>
+        </li>
+      </ol>
+      <p class="pilot-foot">
+        Honest about limits: this is the <strong>missed-call intake</strong> piece — it captures and
+        confirms leads. It doesn't take payments or manage your calendar (yet). We start small,
+        prove it recovers jobs you'd have lost, then decide what's next together.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== BOOK / CTA ===================== -->
+  <section class="band book" id="book">
+    <div class="wrap book-inner">
+      <h2 class="section-title">See it with <span class="hl" id="biz-cta">your business</span> name on it</h2>
+      <p class="section-lead">
+        Book a no-pressure 10-minute call with Emeka at Atlas Automation. I'll run this live with
+        your real business name and a scenario you hear every week. If it doesn't feel right for
+        your customers, no worries and no commitment.
+      </p>
+      <div class="book-cta">
+        <a class="btn btn-primary btn-lg" id="book-email" href="#" data-cta="book-email">📧 Email Emeka to book</a>
+        <a class="btn btn-ghost btn-lg" id="book-call" href="#" data-cta="book-call">📞 Request a call back</a>
+      </div>
+      <p class="book-fine" id="book-fine">
+        Prefer to just reply to the message I sent you? That works too.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <span class="brand-mark">▲</span>
+        <strong>Atlas Automation</strong> — practical tools for local trades. Built in the Kawarthas.
+      </div>
+      <div class="footer-fine">This page is an interactive demo. Sample data only — no real customer information is collected.</div>
+    </div>
+  </footer>
+
+  <script src="personalize.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

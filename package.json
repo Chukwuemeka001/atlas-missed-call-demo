@@ -1,0 +1,11 @@
+{
+  "name": "atlas-missed-call-public-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Prospect-viewable static demo of Atlas Automation's missed-call text-back service for Peterborough trades. No backend, no secrets, no paid APIs.",
+  "scripts": {
+    "test": "node test/smoke-test.js",
+    "serve": "node -e \"const h=require('http'),f=require('fs'),p=require('path');const t={'.html':'text/html','.css':'text/css','.js':'text/javascript'};h.createServer((q,r)=>{let u=q.url.split('?')[0];if(u==='/')u='/index.html';const fp=p.join(process.cwd(),u);f.readFile(fp,(e,d)=>{if(e){r.writeHead(404);return r.end('not found')}r.writeHead(200,{'Content-Type':t[p.extname(fp)]||'text/plain'});r.end(d)})}).listen(8080,()=>console.log('Demo: http://localhost:8080/  (try ?business=Acme%20Plumbing)'))\""
+  },
+  "license": "UNLICENSED"
+}
