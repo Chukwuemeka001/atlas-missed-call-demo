@@ -185,7 +185,7 @@ Plain, benefit-first, no hard sell. Replace `[Business]`, the link, and your sig
 ## Guardrails honoured in this build
 
 - Static only — no backend, no secrets, no paid APIs, no accounts created, nothing deployed.
-- Honest framing: the "live pilot" section openly states a regulated SMS provider (Twilio) is
+- Honest framing: the "live pilot" section openly states a trusted communications provider is
   wired in for real texts, and that this is the **intake** slice (no payments/calendar yet).
 - Leads in the dashboard are clearly sample data; no real customer info is collected.
 - You stay in control: every flow is approved by you before going live.

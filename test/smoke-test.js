@@ -70,7 +70,7 @@ var COPY = [
   ['mentions Peterborough/Kawartha', /Peterborough|Kawartha/i],
   ['mentions missed call', /missed call/i],
   ['10-minute demo CTA', /10[\s-]?min/i],
-  ['transparent SMS provider note', /Twilio/i],
+  ['transparent communications provider note', /trusted communications provider/i],
   ['mentions dashboard', /dashboard/i],
   ['recovered opportunity framing', /recover/i],
 ];
